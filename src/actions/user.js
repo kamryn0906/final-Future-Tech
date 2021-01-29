@@ -1,17 +1,21 @@
 import { 
-    SET_USER_PURCHASES,
-    SET_PURCHASE_DETAIL,
     SET_CART_PRODUCTS,
     ADD_CART_PRODUCT,
-    AUTHENTICATE_USER
 } from './types';
 
-export function setPurchaseDetail(_id) {
-    return ({
-        type: SET_PURCHASE_DETAIL,
-        payload: _id
-    })
-}
+// export function paymentForm({name, address}) {
+//     return ({
+//         type: AUTHENTICATE_USER,
+//         payload: {
+//             user: {
+//                 _id: 0,
+//                 name: [],
+//                 address: [],
+//                 cartProducts: []
+//             }
+//         }
+//     })
+// }
 
 export function addCartProduct(product) {
     return ({

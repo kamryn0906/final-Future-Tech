@@ -12,6 +12,8 @@
 
     &__image {
         grid-column: image-s/image-e;
+        width: 80px;
+        height: 80px;
     }
     &__title {
         grid-column: title-s/title-e;

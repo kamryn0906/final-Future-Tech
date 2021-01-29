@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 class Quantity extends Component {
     render() {
-        const { className, quantity, icon, onClick } = this.props;
+        const { className, quantity} = this.props;
         return (
             <div className={`${className} quantity`}>
                 <div className='quantity__count'>

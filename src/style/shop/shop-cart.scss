@@ -43,9 +43,12 @@
     display: grid;
     justify-items: center;
     align-items: center;
+
+    margin-top: 350px;
 }
 
 .cart-content {
+    margin-top: 350px;
     display: grid;
     grid-template-rows: 25px [title-s] 40px [title-e products-s] 1fr [products-e footer-s] 113px [footer-e];
     grid-template-columns: [footer-s] 30px [s] 1fr [e] 30px [footer-e];

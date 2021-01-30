@@ -5,7 +5,7 @@ import PriceTag from '../priceTag';
 class CartProduct extends Component {
     render() {
         console.log(this.props);
-        const { className, product, quantity, icon, onClick } = this.props;
+        const { className, product, quantity} = this.props;
         const { title, price, imageUrl } = product;
         return (
             <div className={`${className} cart-product`}>

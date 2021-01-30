@@ -13,6 +13,11 @@
         height: 21px;
         width: 29px;
         grid-column: m/e;
+
+        :hover{
+            color: #0ed1ebf5;
+            transform: scale(0.97);
+        }
     }
 
     &__count {

@@ -35,6 +35,11 @@
 
         font-size: 30px;
         text-decoration-line: underline;
+
+        :hover{
+            color: #0ed1ebf5;
+            transform: scale(0.97);
+        }
     }
     &__price {
         align-self: center;

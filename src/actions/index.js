@@ -5,11 +5,9 @@ import {
 } from './headernavbar';
 
 import {
-    fetchUserPurchases,
-    setPurchaseDetail,
     fetchCartProducts,
     addCartProduct,
-    // ShippingForm
+    ShippingForm
 } from './user';
 
 import {
@@ -24,11 +22,9 @@ export {
     setNavbarLinks,
     changeNavbarActive,
 
-    fetchUserPurchases,
-    setPurchaseDetail,
     fetchCartProducts,
     addCartProduct,
-    // ShippingForm,
+    ShippingForm,
 
     fetchShopCategories,
     fetchShopProducts,

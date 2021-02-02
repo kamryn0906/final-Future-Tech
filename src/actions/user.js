@@ -1,23 +1,8 @@
 import { 
-    SET_SHIPPING_FORM,
     SET_CART_PRODUCTS,
     ADD_CART_PRODUCT,
-    AUTHENTICATE_USER
 } from './types';
 
-export function ShippingForm ({name, address}) {
-    return ({
-        type: AUTHENTICATE_USER,
-        payload: {
-            user: {
-                _id: 0,
-                name: 'kam',
-                address: '123 st',
-                cartProducts: []
-            }
-        }
-    })
-}
 
 export function addCartProduct(product) {
     return ({

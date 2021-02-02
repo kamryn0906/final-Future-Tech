@@ -7,12 +7,10 @@ import { FormInput, FormButton } from '../formFields';
 import history from '../../history';
 
 import OrderSummary from './orderSummary';
+import PaymentForm from './paymentForm';
 
 class ShippingForm extends Component {
     render() {
-        const { className, user } = this.props;
-        const { name, shippingAddress } = user;
-        const name = `${name}       ${shippingAddress}`
         const { className, handleSubmit } = this.props;
   
         return (
@@ -57,7 +55,7 @@ class ShippingForm extends Component {
                 name='use-this-address'
                 component={FormButton}/>
                 <Field className='shipping-form__back'
-                onClick={() => history.push('/order/review')}
+                onClick={() => history.push('/signin')}
                 type='button'
                 title='Back'
                 name='back'
@@ -72,14 +70,5 @@ class ShippingForm extends Component {
 ShippingForm = reduxForm({
     form: 'ShippingForm'
 })(ShippingForm);
-
-function mapStateToProps(state) {
-    const { shippingForm } = state.user;
-    return {
-        ...shippingForm
-    }
-}
-
-ShippingForm = connect(mapStateToProps)(ShippingForm);
 
 export default ShippingForm;

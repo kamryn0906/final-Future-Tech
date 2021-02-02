@@ -1,6 +1,5 @@
 import {
-    SET_USER_PURCHASES,
-    SET_PURCHASE_DETAIL,
+    SET_SHIPPING_FORM,
     SET_CART_PRODUCTS,
     ADD_CART_PRODUCT,
     AUTHENTICATE_USER
@@ -9,9 +8,8 @@ import {
 const INITIAL_STATE = {
     user: {},
     cartProducts: [],
-    purchases: [],
-    purchaseDetail: {
-        _id: -1,
+    shippingForm: {
+        _id: 0,
         total: 0,
         orderNumber: '',
         orderDate: null,
@@ -58,21 +56,16 @@ export default function(state = INITIAL_STATE, action) {
                 ...state,
                 cartProducts: action.payload
             }
-        case SET_USER_PURCHASES:
-            return {
-                ...state,
-                purchases: action.payload
-            }
-        case SET_PURCHASE_DETAIL:
-            let purchaseDetail;
-            state.purchases.map(purchase => {
-                if(purchase._id == action.payload) {
-                    purchaseDetail = purchase;
+        case SET_SHIPPING_FORM:
+            let shippingForm;
+            state.shpping.map(shipping => {
+                if(shipping._id == action.payload) {
+                    shippingForm = shipping;
                 }
             })
             return {
                 ...state,
-                purchaseDetail
+                shippingForm
             }
         default: return state;
     }

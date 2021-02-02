@@ -6,8 +6,9 @@ import {
 
 import {
     fetchCartProducts,
+    setShippingForm,
     addCartProduct,
-    ShippingForm
+    shippingForm
 } from './user';
 
 import {
@@ -22,9 +23,10 @@ export {
     setNavbarLinks,
     changeNavbarActive,
 
+    setShippingForm,
     fetchCartProducts,
     addCartProduct,
-    ShippingForm,
+    shippingForm,
 
     fetchShopCategories,
     fetchShopProducts,

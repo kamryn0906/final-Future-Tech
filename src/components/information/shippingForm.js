@@ -10,6 +10,9 @@ import OrderSummary from './orderSummary';
 
 class ShippingForm extends Component {
     render() {
+        const { className, user } = this.props;
+        const { name, shippingAddress } = user;
+        const name = `${name}       ${shippingAddress}`
         const { className, handleSubmit } = this.props;
   
         return (
@@ -69,5 +72,14 @@ class ShippingForm extends Component {
 ShippingForm = reduxForm({
     form: 'ShippingForm'
 })(ShippingForm);
+
+function mapStateToProps(state) {
+    const { shippingForm } = state.user;
+    return {
+        ...shippingForm
+    }
+}
+
+ShippingForm = connect(mapStateToProps)(ShippingForm);
 
 export default ShippingForm;

@@ -1,5 +1,4 @@
 import {
-    SET_SHIPPING_FORM,
     SET_CART_PRODUCTS,
     ADD_CART_PRODUCT,
     AUTHENTICATE_USER
@@ -55,17 +54,6 @@ export default function(state = INITIAL_STATE, action) {
             return {
                 ...state,
                 cartProducts: action.payload
-            }
-        case SET_SHIPPING_FORM:
-            let shippingForm;
-            state.shpping.map(shipping => {
-                if(shipping._id == action.payload) {
-                    shippingForm = shipping;
-                }
-            })
-            return {
-                ...state,
-                shippingForm
             }
         default: return state;
     }

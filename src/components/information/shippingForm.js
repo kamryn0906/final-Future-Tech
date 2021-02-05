@@ -7,7 +7,7 @@ import { FormInput, FormButton } from '../formFields';
 import history from '../../history';
 
 import OrderSummary from './orderSummary';
-import PaymentForm from './paymentForm';
+// import PaymentForm from './paymentForm';
 
 class ShippingForm extends Component {
     render() {

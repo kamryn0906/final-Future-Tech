@@ -1,6 +1,22 @@
 import React, { Component } from 'react';
 
 class Quantity extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {quantity: 0};
+    
+        this.handleAddAndSubtract = this.handleAddAndSubtract.bind(this);
+    }
+    
+    handleAddAndSubtract = () => {
+        if {
+            this.setState({quantity: quantity + 1});
+            (this.state.quantity)
+        }else{
+            this.setState({quantity: quantity - 1}); 
+        }
+    }
+    
     render() {
         const { className, quantity} = this.props;
         return (

@@ -16,7 +16,7 @@ class Quantity extends Component {
             this.setState({quantity: quantity - 1}); 
         }
     }
-    
+
     render() {
         const { className, quantity} = this.props;
         return (

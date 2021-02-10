@@ -6,7 +6,7 @@ function CartButton({className, icon, onClick}) {
     handleRemove(cartProducts) {
         console.log(cartProducts);
     }
-
+    
     return (
         <a onClick={handleRemove} className={`${className} cart-button`}>
             <i className={icon}/>        

@@ -11,6 +11,13 @@ export function addCartProduct(product) {
     })
 }
 
+export function deleteCartProduct(product) {
+    return ({
+        type: DELETE_CART_PRODUCT,
+        payload: product
+    })
+}
+
 export function fetchCartProducts() {
     return ({
         type: SET_CART_PRODUCTS,

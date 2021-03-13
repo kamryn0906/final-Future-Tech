@@ -15,6 +15,7 @@ class Shop extends Component {
         this.state = {
             showCart: true
         }
+        this.handleDeleteFromCart = this.handleDeleteFromCart.bind(this)
     }
 
     componentDidMount() {
@@ -48,9 +49,17 @@ class Shop extends Component {
         }
     }
 
+    handleDeleteFromCart = () => {
+        if(document.getElementById('cart-product').classList.contains('cart-hidden')) {
+            document.getElementById('cart-product').classList.add('cart-hidden');
+            console.log("doesn't have cart hidden")
+        } else {
+            console.log("does have cart hidden")
+            document.getElementById('cart-product').classList.remove('cart-hidden');
+        }
+    }
 
     render() {
-        // return <ShopCart className='shop__cart'/>
         return (
             <div className='shop'>
                 <ShopSearchBar onSubmit={this.onSubmit} className='shop__search-bar'/>

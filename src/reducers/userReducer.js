@@ -50,6 +50,28 @@ export default function(state = INITIAL_STATE, action) {
                 ...state,
                 cartProducts: cartProducts
             }
+            case DELETE_CART_PRODUCT:
+                var exists = false
+                const newCP = action.payload;
+                var cartProducts = []
+                state.cartProducts.map(cartProduct => {
+                    if(cartProduct.product._id == newCP._id) {
+                        exists = true
+                        cartProduct.quantity -= 1;
+                    }
+                    cartProducts.push(cartProduct);
+                })
+                if(exists == false)  {
+                    cartProducts.push({
+                        _id: state.cartProducts.length - 1,
+                        product: newCP,
+                        quantity: 0
+                    })
+                }
+                return {
+                    ...state,
+                    cartProducts: cartProducts
+                }
         case SET_CART_PRODUCTS:
             return {
                 ...state,

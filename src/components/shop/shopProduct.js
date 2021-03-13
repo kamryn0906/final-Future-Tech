@@ -33,7 +33,7 @@ class ShopProduct extends Component {
                         {description}
                     </div>
                     <PriceTag className='shop-product__back__price' title={price}/>
-                    <Quantity className='shop-product__back__quantity' count={[]}/>
+                    <Quantity className='shop-product__back__quantity' />
                     <a onClick={this.handleAddToCart} className='shop-product__back__add-to-cart'>
                         Add to Cart
                     </a>

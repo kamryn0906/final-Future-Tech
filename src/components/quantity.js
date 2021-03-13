@@ -10,13 +10,13 @@ class Quantity extends Component {
     }
 
     handleAdd = () => {
-        this.setState({count: count + 1});
-        return console.log(ok)
+        this.setState({count: this.state.count + 1});
     }
 
     handleSubtract = () => {
-        this.setState({count: count - 1});
-        return console.log(ok)
+        if (this.state.count >=2){
+            this.setState({count: this.state.count - 1});
+        };
     }
 
     render() {
@@ -24,7 +24,7 @@ class Quantity extends Component {
         return (
             <div className={`${className} quantity`}>
                 <div className='quantity__count'>
-                    {quantity}
+                    {this.state.count}
                 </div>
                 <a onClick={this.handleAdd} className={`${className} quantity__plus`}>
                     <i className='fas fa-plus'></i>     
